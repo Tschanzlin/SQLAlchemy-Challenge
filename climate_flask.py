@@ -42,6 +42,8 @@ def launch_page():
         f"/api/v1.0/Start-End"
     )
 
+# Stations Route --------------------------------------
+
 
 @app.route("/api/v1.0/Stations")
 def station_names():
@@ -55,6 +57,8 @@ def station_names():
     # Convert list of tuples into normal list
     all_names = list(np.ravel(results))
     return jsonify(all_names)
+
+# Precipitation Route ---------------------------------
 
 
 @app.route("/api/v1.0/Precipitation")
@@ -77,6 +81,8 @@ def precip_measure():
 
     return jsonify(formatted_results)
 
+# Tobs Route -------------------------------------------
+
 
 @app.route("/api/v1.0/Tobs")
 def temps():
@@ -92,6 +98,8 @@ def temps():
     session.close()
 
     return jsonify(results)
+
+# Start Route -------------------------------------------
 
 
 @app.route("/api/v1.0/Start")
@@ -120,6 +128,8 @@ def temps_start():
         "Avg Temp": avg_temp}, {"High Temp": hi_temp}]
 
     return jsonify(results)
+
+# Start / End Route --------------------------------------
 
 
 @app.route("/api/v1.0/Start-End")
