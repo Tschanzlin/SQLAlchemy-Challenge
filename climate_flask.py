@@ -42,8 +42,8 @@ def launch_page():
         f"/api/v1.0/Start-End"
     )
 
-# Stations Route --------------------------------------
 
+# Stations Route --------------------------------------
 
 @app.route("/api/v1.0/Stations")
 def station_names():
@@ -58,8 +58,8 @@ def station_names():
     all_names = list(np.ravel(results))
     return jsonify(all_names)
 
-# Precipitation Route ---------------------------------
 
+# Precipitation Route ---------------------------------
 
 @app.route("/api/v1.0/Precipitation")
 def precip_measure():
@@ -81,8 +81,8 @@ def precip_measure():
 
     return jsonify(formatted_results)
 
-# Tobs Route -------------------------------------------
 
+# Tobs Route -------------------------------------------
 
 @app.route("/api/v1.0/Tobs")
 def temps():
@@ -99,8 +99,8 @@ def temps():
 
     return jsonify(results)
 
-# Start Route -------------------------------------------
 
+# Start Route -------------------------------------------
 
 @app.route("/api/v1.0/Start")
 def temps_start():
@@ -129,8 +129,8 @@ def temps_start():
 
     return jsonify(results)
 
-# Start / End Route --------------------------------------
 
+# Start / End Route --------------------------------------
 
 @app.route("/api/v1.0/Start-End")
 def temps_range():
