@@ -1,5 +1,10 @@
 # SQLAlchemy-Challenge
 
+Bonus Challenges:
+# 1:  I used the independent t-test as the test is comparing the tempurature variation across two different months or seasons (which you expect would be different), rather comparing variations within the same month across different years (which you would normally expect to be the same).  The resulting t-test had a very high t-score, indicating that the difference between the groups is much higher than within the group.  The p-score is effectively 0, indicating that the results are statistically significant, or unlikely to be due to chance.
+
+# 2:   
+
 Notes:
 - Output for precipation do not match images, but the descriptive statistics total 2,000 + items, which doesn't make sense if the data is grouped by date to come up with an average daily rainfall
 - Try eliminating the group by date and just have it plot the data by day
